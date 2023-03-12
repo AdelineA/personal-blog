@@ -5,37 +5,36 @@ import { NavLink } from 'react-router-dom'
 
 export default function Navigation() {
   return (
-    <header class="flex flex-col bg-white border-bg-white px-2 sm:px-4 py-2.5 rounded">
-        <div class="bg-white border-gray-300 ml-9 px-2 sm:px-4 py-2.5 rounded text-xl items-center font-semibold ">
-        THE CREATIVE80 ROOM 
+    <header class="flex flex-col bg-white border-bg-white px-2 sm:px-4 py-2.5 rounded border-2 w-full">
+        <div class="bg-white border-gray-300 px-4 sm:px-4 py-2.5">
+          <h1 class="text-xl items-center justify-center text-center font-semibold "> THE CREATIVE80 ROOM</h1> 
         </div> 
-        <nav class="bg-white border-bg-white py-2 px-4 sm:py-2.5 border-2 ">
+        <nav class="bg-white border-bg-white py-2 px-4 sm:py-2.5 ">
             <div class="container flex flex-wrap items-center justify-between mt-8 mx-auto">
 
-               <NavLink to="#" class="block py-2 pl-3 pr-4 rounded hover:text-indigo-700">
-                
+               <NavLink to="#" class="block py-2 pl-3 pr-4  hover:text-indigo-700 rounded">
                     Design
                 </NavLink>
 
-                <NavLink to="#" class="block py-2 pl-3 pr-4 rounded hover:text-indigo-700">
+                <NavLink to="#" class="block py-2 pl-3 pr-4  hover:text-indigo-700 rounded">
                     Film
                 </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 rounded hover:text-indigo-700">
+                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
                     Advertising
                 </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 rounded hover:text-indigo-700">
+                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
                     Photography
                 </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 rounded hover:text-indigo-700">
+                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
                     Digital
                 </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 rounded hover:text-indigo-700">
+                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded ">
                     Podcast
                 </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 rounded hover:text-indigo-700">
+                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded ">
                 About
                 </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 rounded hover:text-indigo-700">
+                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded ">
                 Contact
                 </NavLink>
                 <div class="flex flex-wrap float-right">
