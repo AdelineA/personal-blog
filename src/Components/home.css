@@ -1,0 +1,54 @@
+/* .cont {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.myimg {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+} */
+
+.wrap {
+    height: 70vh;
+    border: 1px solid white;
+}
+
+.left {
+    position: absolute;
+    top: 125%;
+    left: 0;
+}
+
+.right {
+    position: absolute;
+    top: 40%;
+    right: 2rem;
+    width: 50%;
+    height: 120%;
+    border-radius: 5px;
+}
+
+.cadio {
+    border: 1px solid white;
+}
+
+.left-cont {
+  margin-top: 6rem;
+
+}
+.design{
+    position: absolute;
+    margin-top: -30px;
+    color: white;
+    padding-left: 10px;
+
+}
+.btn{
+    position: fixed;
+    right: 0;
+}
+.Ade{
+    border-radius:75px 50px 50px 50px;
+}

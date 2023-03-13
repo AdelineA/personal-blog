@@ -10,14 +10,15 @@ import Fime from '../imgs/Fime.jpg'
 import Ade from '../imgs/Ade.jpeg'
 import Photo from '../imgs/Photo.jpg'
 import Play from '../imgs/Play.png'
+import "./home.css"
 
 
 
 export default function Home() {
   return (
-    <div class="mt-4">
-        <div class="bg-white t-0 py-2 px-4 border-2 rounded hover:bg-indigo-700 hover:text-white float-right">
-        <button >Customize</button>
+    <div class="mt- left-cont">
+        <div class="bg-white t-0 py-2 mb-2 px-4 border-2 rounded hover:bg-indigo-700 hover:text-white float-right btn">
+        <button className='butt'>Customize</button>
         </div>
         <div class="flex">
             <div class="flex-col mt-4 ml-4 px-4">
@@ -27,16 +28,19 @@ export default function Home() {
            Ut elit tellus, luctus nec<br/> ullamcorper mattis, pulvinar dapibus leo.</p>
            <button class="bg-blue-500 mt-8 py-2.5 px-6 rounded text-white hover:bg-black">READ ARTICLE
            </button>
-           <div class="bg-blue-100 w-auto h-screen">
-           <img src={Left} class="mt-8" alt="" />
-           </div>
             </div>
-            <div class="overflow-clip">
-            <img src={Right} class="w-max h-auto py-4 px-8 box rounded"  alt="" />
-           </div>
+            <div className='imgcontain'>
+              <div class="w-auto h-screen">
+                <img src={Left} class="left" alt="" />
+             </div>
+              <div class="overflow-clip">
+              <img src={Right} class="py-10 box right"  alt="" />
+              </div>
+            </div>
+            
         </div>
-        <div class="bg-blue-100 mt-4 ">
-          <div class="bg-white flex py-2.5 px-4 mt-4 h-max items-center justify-between ml-24 mr-10 border-4 sm:py-2.5 rounded border-bg-white">
+        <div class="bg-blue-100 wrap">
+          <div class="bg-white flex px-4 mt-60 h-max items-center justify-between ml-24 mr-10 border-4 sm:py-2.5 rounded border-bg-white cadio">
             <div class="text-xl flex-col mb-16">
             <h2 class="font-bold mt-6">Subscribe to our Newsletter</h2>
             <p class="mt-3 text-sm">Elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
@@ -56,19 +60,19 @@ export default function Home() {
           <div class=" ml-2 flex flex-wrap  mt-12">
             <div class="w-72 h-full ml-4 p-2 bg-white border border-gray-200 ">
               <img src={Design} class="" alt="" />
-              <h2 class="text-xl font-bold items-center text-center">Design</h2>
+              <h2 class="text-xl font-bold items-center text-center design">Design</h2>
             </div>
             <div class="w-72 h-full ml-4 p-2 bg-white border border-gray-200 rounded ">
               <img src={Adverts}  alt="" />
-              <h2 class="text-xl font-bold items-center text-center">Advertising</h2>
+              <h2 class="text-xl font-bold items-center text-center design">Advertising</h2>
             </div>
             <div class="w-80 h-full ml-4 p-2 bg-white border border-gray-200 rounded ">
               <img src={Photograph}  alt="" />
-              <h2 class="text-xl font-bold items-center text-center">Photograph</h2>
+              <h2 class="text-xl font-bold items-center text-center design">Photograph</h2>
             </div>
             <div class="w-72 h-full ml-4 p-2 bg-white border border-gray-200 rounded">
               <img src={Fime}  alt="" />
-              <h2 class="text-xl font-bold items-center text-center" >Filme</h2>
+              <h2 class="text-xl font-bold items-center text-center design" >Filme</h2>
             </div>
 
           </div>
@@ -80,7 +84,7 @@ export default function Home() {
             <div class="w-max py-2 px-4 bg-white shadow-lg rounded-lg my-20">
               <div class="flex flex-wrap">
                 <h1 class="text-blue-700 text-xl justify-start ">Jennifer<br/>Oliver</h1>
-                <img src={Ade} class="w-20 h-20 ml-16 justify-end object-cover rounded-l-xl border-2 border-indigo-500"alt="" />
+                {/* <img src={Ade} class="Ade w-20 h-20 ml-16 justify-end object-cover rounded-l-xl border-2 border-indigo-500"alt="" /> */}
               </div>
               <div class="flex-col">
                 <p>Episode 48</p>
@@ -92,7 +96,7 @@ export default function Home() {
             <div class="w-max ml-4 py-2 px-4 bg-white shadow-lg rounded-lg my-20">
               <div class="flex flex-wrap">
                 <h1 class="text-blue-700 text-xl justify-start ">Jennifer<br/>Oliver</h1>
-                <img src={Ade} class="w-20 h-20 ml-16 justify-end object-cover rounded-l-xl border-2 border-indigo-500"alt="" />
+                {/* <img src={Ade} class="w-20 h-20 ml-16 justify-end object-cover rounded-l-xl border-2 border-indigo-500"alt="" /> */}
               </div>
               <div class="flex-col">
                 <p>Episode 49</p>
@@ -104,7 +108,7 @@ export default function Home() {
             <div class="w-max ml-4 py-2 px-4 bg-white shadow-lg rounded-lg my-20">
               <div class="flex flex-wrap">
                 <h1 class="text-blue-700 text-xl justify-start ">Jennifer<br/>Oliver</h1>
-                <img src={Ade} class="w-20 h-20 ml-16 justify-end object-cover rounded-l-xl border-2 border-indigo-500"alt="" />
+                {/* <img src={Ade} class="w-20 h-15 ml-20 justify-end border-indigo-500 top-0"alt="pho" /> */}
               </div>
               <div class="flex-col">
                 <p>Episode 50</p>
@@ -118,15 +122,15 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer class="bg-indigo-100 mt-10 py-4 px-8 rounded">
+        <footer class="bg-indigo-100 mt-10 ">
         <nav class="bg-white border-bg-white py-2 px-4 sm:py-2.5 ">
-            <div class="container flex flex-wrap items-center justify-between mt-8 mx-auto">
+            <div class="container flex gap-5 mt-8 nav">
 
                <NavLink to="#" class="block py-2 pl-3 pr-4  hover:text-indigo-700 rounded">
                     Design
                 </NavLink>
 
-                <NavLink to="#" class="block py-2 pl-3 pr-4  hover:text-indigo-700 rounded">
+                <NavLink to="#" class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
                     Film
                 </NavLink>
                 <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
@@ -148,10 +152,10 @@ export default function Home() {
                 Contact
                 </NavLink>
                 <div class="flex flex-wrap float-right">
-                    <NavLink>
+                    {/* <NavLink>
                     <svg aria-hidden="true" class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round"stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </NavLink>
-                    <button class="bg-red-500 py-2 px-4 rounded ml-3 text-white hover:bg-black">SUBSCRIBE</button>
+                    <button class="bg-red-500 py-2 px-4 rounded ml-3 text-white hover:bg-black">SUBSCRIBE</button> */}
                 </div>
             </div>
         </nav>
