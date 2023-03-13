@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Right from '../imgs/Right.jpg'
 import Left from '../imgs/Left.png'
@@ -15,6 +15,10 @@ import "./home.css"
 
 
 export default function Home() {
+  const[showMore,setShowMore] = useState(false)
+  const {text} = ""
+  
+
   return (
     <div class="mt- left-cont">
         <div class="bg-white t-0 py-2 mb-2 px-4 border-2 rounded hover:bg-indigo-700 hover:text-white float-right btn">
@@ -24,8 +28,15 @@ export default function Home() {
             <div class="flex-col mt-4 ml-4 px-4">
             <h6 class="text-sm font-bold">Support and help the creative community</h6> 
            <h1 class="font-bold text-6xl mt-2 mb-2">We are <br/>Creative80</h1>
-           <p class="not-italic mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-           Ut elit tellus, luctus nec<br/> ullamcorper mattis, pulvinar dapibus leo.</p>
+           <p class="not-italic mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Ut elit tellus, luctus nec<br/> ullamcorper mattis, pulvinar dapibus leo.<br/>
+           {showMore ? text: " Ut elit tellus, luctus nec ullamcorper mattis,pulvinar dapibus leo. "}
+            <button onClick={()=>setShowMore(!showMore)} 
+            class="bg-blue-500 mt-8 py-2.5 px-6 rounded text-white hover:bg-black">
+              {showMore? "showMore":"showless" }
+              </button>
+            </p>
            <button class="bg-blue-500 mt-8 py-2.5 px-6 rounded text-white hover:bg-black">READ ARTICLE
            </button>
             </div>
@@ -84,7 +95,7 @@ export default function Home() {
             <div class="w-max py-2 px-4 bg-white shadow-lg rounded-lg my-20">
               <div class="flex flex-wrap">
                 <h1 class="text-blue-700 text-xl justify-start ">Jennifer<br/>Oliver</h1>
-                {/* <img src={Ade} class="Ade w-20 h-20 ml-16 justify-end object-cover rounded-l-xl border-2 border-indigo-500"alt="" /> */}
+                <img src={Ade} class="Ade w-20 h-20 ml-16 justify-end object-cover rounded-l-xl border-2 border-indigo-500"alt="" />
               </div>
               <div class="flex-col">
                 <p>Episode 48</p>
@@ -122,49 +133,50 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer class="bg-indigo-100 mt-10 ">
-        <nav class="bg-white border-bg-white py-2 px-4 sm:py-2.5 ">
-            <div class="container flex gap-5 mt-8 nav">
+        <footer class="bg-indigo-100 mt-8 ">
 
-               <NavLink to="#" class="block py-2 pl-3 pr-4  hover:text-indigo-700 rounded">
-                    Design
-                </NavLink>
+          <nav class="border-bg-white mt-10 py-2 px-4 sm:py-2.5  ">
+              <div class="ml-8 container flex gap-5 nav mt-6">
 
-                <NavLink to="#" class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
-                    Film
-                </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
-                    Advertising
-                </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
-                    Photography
-                </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
-                    Digital
-                </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded ">
-                    Podcast
-                </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded ">
-                About
-                </NavLink>
-                <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded ">
-                Contact
-                </NavLink>
-                <div class="flex flex-wrap float-right">
-                    {/* <NavLink>
-                    <svg aria-hidden="true" class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round"stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    </NavLink>
-                    <button class="bg-red-500 py-2 px-4 rounded ml-3 text-white hover:bg-black">SUBSCRIBE</button> */}
-                </div>
-            </div>
-        </nav>
-        <div class="text-center justify-center mt-10">
-          <h3 class="text-lg font-bold mb-7">Sign up to receive email updates, fresh news and <br/>more!</h3>
-          <input type="email" id="email" class="bg-white border-2 border-gray-300 text-gray-900 text-sm rounded-lg w-80 p-2.5 dark:placeholder-gray-400 " placeholder="Email address" required/>
-          <button class="bg-blue-600 py-2 px-4 rounded ml-3 text-white hover:bg-black">SUBSCRIBE</button>
-        </div>
-        <div class="text-center items-center justify-center mt-6 px-4 py-2 mb-6">Copyright © 2023 Creative Blog | Powered by Creative Blog</div>
+                <NavLink to="#" class="block py-2 pl-3 pr-4  hover:text-indigo-700 rounded">
+                      Design
+                  </NavLink>
+
+                  <NavLink to="#" class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
+                      Film
+                  </NavLink>
+                  <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
+                      Advertising
+                  </NavLink>
+                  <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
+                      Photography
+                  </NavLink>
+                  <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded">
+                      Digital
+                  </NavLink>
+                  <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded ">
+                      Podcast
+                  </NavLink>
+                  <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded ">
+                  About
+                  </NavLink>
+                  <NavLink to="#"class="block py-2 pl-3 pr-4 hover:text-indigo-700 rounded ">
+                  Contact
+                  </NavLink>
+                  <div class="flex flex-wrap float-right">
+                      {/* <NavLink>
+                      <svg aria-hidden="true" class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round"stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                      </NavLink>
+                      <button class="bg-red-500 py-2 px-4 rounded ml-3 text-white hover:bg-black">SUBSCRIBE</button> */}
+                  </div>
+              </div>
+          </nav>
+          <div class="text-center justify-center mt-10">
+            <h3 class="text-lg font-bold mb-7">Sign up to receive email updates, fresh news and <br/>more!</h3>
+            <input type="email" id="email" class="bg-white border-2 border-gray-300 text-gray-900 text-sm rounded-lg w-80 p-2.5 dark:placeholder-gray-400 " placeholder="Email address" required/>
+            <button class="bg-blue-600 py-2 px-4 rounded ml-3 text-white hover:bg-black">SUBSCRIBE</button>
+          </div>
+          <div class="text-center items-center justify-center mt-6 mb-14 px-4 py-2 mb-6">Copyright © 2023 Creative Blog | Powered by Creative Blog</div>
         </footer>   
 
     </div>
